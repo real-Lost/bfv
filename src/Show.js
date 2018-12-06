@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Show.css";
+import { Swipeable } from 'react-touch';
 
 const tumblr_re = /^\d+?\.media\.tumblr\.com$/;
 
@@ -129,12 +130,17 @@ const Strategy = ({ url }) => {
   return <Iframe src={src} title={title} />;
 };
 
-export default function Show({ link: source, style }) {
+export default function Show({ link: source, style, nextFunc, prevFunc}) {
+  // const {prevFunc, nextFunc} = this.props;
   const url = new URL(source);
   return (
     <div key={source} className="item-container" style={style}>
-      <a href={url} target="_blank" rel="noopener noreferrer">Source</a>
       <Strategy url={url} />
+      <Swipeable onSwipeLeft={nextFunc} onSwipeRight={prevFunc}>
+        <div className="bottom-bar">
+          <a href={url} target="_blank" rel="noopener noreferrer" >Source</a>
+        </div>
+      </Swipeable>
     </div>
   );
 }

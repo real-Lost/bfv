@@ -18,3 +18,8 @@ img.error {
 	background: url(./static/loading.gif) center center no-repeat;
 	display:flex;
 }
+
+.bottom-bar{
+	background-color: black;
+	height: 40px;
+}

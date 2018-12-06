@@ -12,6 +12,7 @@ export default class Viewer extends Component {
     
     const { content } = this.props;
 
+
     const types = Object.keys(content).sort();
     this.state = {
       currentType: types[0],
@@ -23,6 +24,9 @@ export default class Viewer extends Component {
       dropItems: this.createDropItems(),
       ButtonIconSize: 40 
     };
+
+    this.next = this.next.bind(this);
+    this.prev = this.prev.bind(this);
   }
 
   componentDidUpdate() {
@@ -159,7 +163,7 @@ export default class Viewer extends Component {
     return (
       <div className="viewer-container">
         { this.renderButtonBar() }
-        <Show link={q[pos]} />
+        <Show link={q[pos]} nextFunc={this.next} prevFunc={this.prev}/>
       </div>
     );
   }
