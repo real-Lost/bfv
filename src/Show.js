@@ -133,6 +133,7 @@ const Strategy = ({ url }) => {
 export default function Show({ link: source, style, nextFunc, prevFunc}) {
   // const {prevFunc, nextFunc} = this.props;
   const url = new URL(source);
+  window.scrollTo(0, 0);
   return (
     <div key={source} className="item-container" style={style}>
       <Strategy url={url} />
