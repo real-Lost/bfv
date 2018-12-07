@@ -29,6 +29,11 @@
 	background-color:#fff;
 }
 
+.dropdown-menu{
+	height: 90vh;
+	overflow-y: scroll; 
+}
+
 .dropdown-selector > button {
 	color: white;
 	background-color: #6c757d ;
