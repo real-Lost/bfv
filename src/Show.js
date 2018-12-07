@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Show.css";
-import { Swipeable } from 'react-touch';
+import { Swipeable, defineSwipe } from 'react-touch';
 
 const tumblr_re = /^\d+?\.media\.tumblr\.com$/;
 
@@ -131,17 +131,17 @@ const Strategy = ({ url }) => {
 };
 
 export default function Show({ link: source, style, nextFunc, prevFunc}) {
-  // const {prevFunc, nextFunc} = this.props;
   const url = new URL(source);
+  const swipe = defineSwipe({swipeDistance: 50});
   window.scrollTo(0, 0);
   return (
-    <div key={source} className="item-container" style={style}>
-      <Strategy url={url} />
-      <Swipeable onSwipeLeft={nextFunc} onSwipeRight={prevFunc}>
-        <div className="bottom-bar">
-          <a href={url} target="_blank" rel="noopener noreferrer" className="source-button">Source</a>
-        </div>
-      </Swipeable>
-    </div>
+    <Swipeable config={swipe} onSwipeLeft={nextFunc} onSwipeRight={prevFunc}>
+      <div key={source} className="item-container" style={style}>
+        <Strategy url={url} />
+          <div className="bottom-bar">
+            <a href={url} target="_blank" rel="noopener noreferrer" className="source-button">Source</a>
+          </div>
+      </div>
+    </Swipeable>
   );
 }
