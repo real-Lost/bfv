@@ -20,8 +20,8 @@ img.error {
 }
 
 .bottom-bar{
-	background-color: black;
-	height: 100px !important;
+	background: linear-gradient(black,grey);
+	height: 500px !important;
 }
 .source-button{
 	display: inline-block;
