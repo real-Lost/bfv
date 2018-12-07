@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/bfv/static/js/runtime~main.43a2f772.js"
   },
   {
-    "revision": "ea574600f6fe29e39cb3",
-    "url": "/bfv/static/js/main.ea574600.chunk.js"
+    "revision": "8351586eba0f36edb796",
+    "url": "/bfv/static/js/main.8351586e.chunk.js"
   },
   {
     "revision": "1ea8330e099653e94e17",
     "url": "/bfv/static/js/1.1ea8330e.chunk.js"
   },
   {
-    "revision": "ea574600f6fe29e39cb3",
+    "revision": "8351586eba0f36edb796",
     "url": "/bfv/static/css/main.9560843f.chunk.css"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/bfv/static/css/1.e872b507.chunk.css"
   },
   {
-    "revision": "f4883e4fd2acd08b4be9514e4abb3007",
+    "revision": "2b686a5e044ea1acea32aafb0cd6d1a4",
     "url": "/bfv/index.html"
   }
 ];
