@@ -139,7 +139,7 @@ export default function Show({ link: source, style, nextFunc, prevFunc}) {
       <Strategy url={url} />
       <Swipeable onSwipeLeft={nextFunc} onSwipeRight={prevFunc}>
         <div className="bottom-bar">
-          <a href={url} target="_blank" rel="noopener noreferrer" >Source</a>
+          <a href={url} target="_blank" rel="noopener noreferrer" className="source-button">Source</a>
         </div>
       </Swipeable>
     </div>
