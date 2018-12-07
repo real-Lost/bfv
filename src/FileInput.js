@@ -8,6 +8,10 @@ export default class FileInput extends Component {
     for (let value of e.target.files) {
       PapaParse.parse(value, {
         complete: (result) => {
+          // this.props.onFileLoaded(result.data, value.name);
+          console.log("done loading csv");
+        },
+        chunk: (result) => {
           this.props.onFileLoaded(result.data, value.name);
         }
       });
